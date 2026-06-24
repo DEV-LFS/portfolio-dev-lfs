@@ -1,13 +1,18 @@
 "use strict";
 
 /* =========================================================
-   ELEMENTOS DA INTERFACE
+   ELEMENTOS GERAIS DA INTERFACE
 ========================================================= */
 
 const header = document.querySelector(".header");
 const menuButton = document.querySelector("#menu-button");
 const navLinksContainer = document.querySelector("#nav-links");
-const navigationLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navigationLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"]'
+);
+const smoothScrollLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"], .logo[href^="#"], .hero-actions a[href^="#"]'
+);
 const currentYearElement = document.querySelector("#current-year");
 
 
@@ -16,9 +21,7 @@ const currentYearElement = document.querySelector("#current-year");
 ========================================================= */
 
 if (currentYearElement) {
-    const currentYear = new Date().getFullYear();
-
-    currentYearElement.textContent = currentYear;
+    currentYearElement.textContent = new Date().getFullYear();
 }
 
 
@@ -82,17 +85,38 @@ if (menuButton) {
 Fecha o menu quando o usuário seleciona uma seção.
 */
 navigationLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        closeMobileMenu();
-    });
+    link.addEventListener("click", closeMobileMenu);
 });
 
 
 /*
-Fecha o menu quando o usuário pressiona Esc.
+Fecha o menu ao pressionar a tecla Escape.
 */
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+        closeMobileMenu();
+    }
+});
+
+
+/*
+Fecha o menu ao clicar fora da navegação.
+*/
+document.addEventListener("click", (event) => {
+    if (!menuButton || !navLinksContainer) {
+        return;
+    }
+
+    const menuIsOpen = navLinksContainer.classList.contains("active");
+
+    if (!menuIsOpen) {
+        return;
+    }
+
+    const clickedInsideMenu = navLinksContainer.contains(event.target);
+    const clickedMenuButton = menuButton.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedMenuButton) {
         closeMobileMenu();
     }
 });
@@ -117,17 +141,123 @@ function updateHeaderStyle() {
         return;
     }
 
-    if (window.scrollY > 30) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 30
+    );
 }
 
 
 window.addEventListener("scroll", updateHeaderStyle);
 
 updateHeaderStyle();
+
+
+/* =========================================================
+   PREFERÊNCIA DE MOVIMENTO REDUZIDO
+========================================================= */
+
+const reduceMotionEnabled = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+
+/* =========================================================
+   FILTROS DAS CERTIFICAÇÕES
+========================================================= */
+
+const certificateFilterButtons = document.querySelectorAll(
+    ".certificate-filter-button"
+);
+
+const certificateCards = document.querySelectorAll(
+    ".certificate-card"
+);
+
+const certificatesEmptyMessage = document.querySelector(
+    "#certificates-empty"
+);
+
+
+function updateCertificateFilter(selectedFilter) {
+    let visibleCertificates = 0;
+
+    certificateCards.forEach((card) => {
+        const cardCategory = card.dataset.category;
+
+        const shouldShow =
+            selectedFilter === "all" ||
+            cardCategory === selectedFilter;
+
+        card.classList.toggle(
+            "is-hidden",
+            !shouldShow
+        );
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow) {
+            visibleCertificates += 1;
+        }
+    });
+
+
+    certificateFilterButtons.forEach((button) => {
+        const buttonFilter = button.dataset.filter;
+        const buttonIsActive = buttonFilter === selectedFilter;
+
+        button.classList.toggle(
+            "active",
+            buttonIsActive
+        );
+
+        button.setAttribute(
+            "aria-pressed",
+            String(buttonIsActive)
+        );
+    });
+
+
+    if (certificatesEmptyMessage) {
+        const categoryIsEmpty = visibleCertificates === 0;
+
+        certificatesEmptyMessage.hidden = !categoryIsEmpty;
+    }
+}
+
+
+certificateFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        if (!selectedFilter) {
+            return;
+        }
+
+        updateCertificateFilter(selectedFilter);
+    });
+});
+
+
+if (certificatesEmptyMessage) {
+    certificatesEmptyMessage.setAttribute(
+        "aria-live",
+        "polite"
+    );
+}
+
+
+/*
+Define o filtro inicial.
+*/
+const initialCertificateFilterButton = document.querySelector(
+    ".certificate-filter-button.active"
+);
+
+const initialCertificateFilter =
+    initialCertificateFilterButton?.dataset.filter || "all";
+
+updateCertificateFilter(initialCertificateFilter);
 
 
 /* =========================================================
@@ -143,6 +273,9 @@ const animatedElements = document.querySelectorAll(
         ".project-card",
         ".timeline-item",
         ".education-card",
+        ".certificates-introduction",
+        ".certificates-filter",
+        ".certificate-card",
         ".contact-content"
     ].join(", ")
 );
@@ -151,9 +284,6 @@ const animatedElements = document.querySelectorAll(
 animatedElements.forEach((element, index) => {
     element.classList.add("reveal");
 
-    /*
-    Cria pequenos intervalos nas animações dos cartões.
-    */
     const delay = (index % 4) * 80;
 
     element.style.setProperty(
@@ -163,15 +293,18 @@ animatedElements.forEach((element, index) => {
 });
 
 
-const reduceMotionEnabled = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-).matches;
-
-
-if (reduceMotionEnabled) {
+function showAllAnimatedElements() {
     animatedElements.forEach((element) => {
         element.classList.add("visible");
     });
+}
+
+
+if (
+    reduceMotionEnabled ||
+    !("IntersectionObserver" in window)
+) {
+    showAllAnimatedElements();
 } else {
     const revealObserver = new IntersectionObserver(
         (entries, observer) => {
@@ -183,7 +316,7 @@ if (reduceMotionEnabled) {
                 entry.target.classList.add("visible");
 
                 /*
-                A animação acontece somente uma vez.
+                Cada elemento é animado apenas uma vez.
                 */
                 observer.unobserve(entry.target);
             });
@@ -193,6 +326,7 @@ if (reduceMotionEnabled) {
             rootMargin: "0px 0px -60px 0px"
         }
     );
+
 
     animatedElements.forEach((element) => {
         revealObserver.observe(element);
@@ -221,38 +355,52 @@ function activateNavigationLink(sectionId) {
 }
 
 
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                activateNavigationLink(entry.target.id);
-            }
-        });
-    },
-    {
-        /*
-        Considera ativa a seção localizada na região
-        central da tela.
-        */
-        rootMargin: "-35% 0px -55% 0px",
-        threshold: 0
-    }
-);
+if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    activateNavigationLink(
+                        entry.target.id
+                    );
+                }
+            });
+        },
+        {
+            /*
+            Considera ativa a seção posicionada
+            na região central da tela.
+            */
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
+        }
+    );
 
 
-pageSections.forEach((section) => {
-    sectionObserver.observe(section);
-});
+    pageSections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+}
 
 
 /* =========================================================
    ROLAGEM SUAVE CONTROLADA
 ========================================================= */
 
-navigationLinks.forEach((link) => {
+smoothScrollLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
         const targetSelector = link.getAttribute("href");
-        const targetSection = document.querySelector(targetSelector);
+
+        if (
+            !targetSelector ||
+            targetSelector === "#"
+        ) {
+            return;
+        }
+
+        const targetSection = document.querySelector(
+            targetSelector
+        );
 
         if (!targetSection) {
             return;
@@ -261,13 +409,13 @@ navigationLinks.forEach((link) => {
         event.preventDefault();
 
         targetSection.scrollIntoView({
-            behavior: reduceMotionEnabled ? "auto" : "smooth",
+            behavior: reduceMotionEnabled
+                ? "auto"
+                : "smooth",
+
             block: "start"
         });
 
-        /*
-        Atualiza a URL sem recarregar a página.
-        */
         history.replaceState(
             null,
             "",
