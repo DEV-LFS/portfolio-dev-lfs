@@ -10,76 +10,190 @@
 
     <meta
         name="description"
-        content="Portfólio profissional de Luis Felipe, estudante de Ciência da Computação com foco em desenvolvimento back-end e Engenharia de Software."
+        content="Portfólio profissional de Luis Felipe, estudante de Ciência da Computação com foco em desenvolvimento back-end, Python, APIs REST e Engenharia de Software."
     >
 
-    <title>Luis Felipe | Desenvolvedor Back-end</title>
+    <meta
+        name="keywords"
+        content="Luis Felipe, Ciência da Computação, Python, FastAPI, SQL, Backend, API REST, Engenharia de Software"
+    >
+
+    <meta
+        name="author"
+        content="Luis Felipe"
+    >
+
+    <meta
+        name="theme-color"
+        content="#070b14"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Luis Felipe | Back-end e Engenharia de Software"
+    >
+
+    <meta
+        property="og:description"
+        content="Projetos, trajetória técnica e conhecimentos em Python, FastAPI, SQL e desenvolvimento back-end."
+    >
+
+    <!-- Twitter / X -->
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Luis Felipe | Portfólio profissional"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Estudante de Ciência da Computação com foco em back-end e Engenharia de Software."
+    >
+
+    <title>Luis Felipe | Back-end e Engenharia de Software</title>
+
+    <!-- Ícone da aba do navegador -->
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        sizes="any"
+        href="./assets/images/favicon.svg?v=4"
+    >
 
     <link
         rel="stylesheet"
-        href="assets/css/style.css"
+        href="./assets/css/style.css"
     >
 </head>
 
 <body>
+    <!-- Link para acessibilidade -->
+    <a
+        href="#conteudo-principal"
+        class="skip-link"
+    >
+        Ir para o conteúdo principal
+    </a>
+
+    <!-- Cabeçalho -->
     <header class="header">
-        <nav class="navbar">
-            <a href="#inicio" class="logo">
-                DEV<span>-LFS</span>
+        <nav
+            class="navbar"
+            aria-label="Navegação principal"
+        >
+            <a
+                href="#inicio"
+                class="logo"
+                aria-label="Ir para o início"
+            >
+                <img
+                    src="./assets/images/favicon.svg?v=4"
+                    alt=""
+                    class="logo-icon"
+                    width="40"
+                    height="40"
+                    aria-hidden="true"
+                >
+
+                <span class="logo-name">
+                    DEV<span>-LFS</span>
+                </span>
             </a>
 
             <button
                 class="menu-button"
                 id="menu-button"
+                type="button"
                 aria-label="Abrir menu de navegação"
                 aria-expanded="false"
+                aria-controls="nav-links"
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <ul class="nav-links" id="nav-links">
+            <ul
+                class="nav-links"
+                id="nav-links"
+            >
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio">
+                        Início
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#tecnologias">Tecnologias</a>
+                    <a href="#tecnologias">
+                        Tecnologias
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#projetos">Projetos</a>
+                    <a href="#projetos">
+                        Projetos
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#jornada">Jornada</a>
+                    <a href="#jornada">
+                        Jornada
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a href="#formacao">
+                        Formação
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Apresentação principal -->
-        <section id="inicio" class="hero">
+    <!-- Conteúdo principal -->
+    <main id="conteudo-principal">
+        <!-- Apresentação -->
+        <section
+            id="inicio"
+            class="hero"
+        >
             <div class="hero-content">
                 <p class="hero-tag">
                     Olá, meu nome é
                 </p>
 
-                <h1>Luis Felipe</h1>
+                <h1>
+                    Luis Felipe
+                </h1>
 
                 <h2>
                     Estudante de Ciência da Computação
-                    <span>e desenvolvedor back-end em formação.</span>
+
+                    <span>
+                        e desenvolvedor back-end em formação.
+                    </span>
                 </h2>
 
                 <p class="hero-description">
@@ -116,7 +230,10 @@
                 </div>
             </div>
 
-            <div class="hero-visual" aria-hidden="true">
+            <div
+                class="hero-visual"
+                aria-hidden="true"
+            >
                 <div class="code-card">
                     <div class="code-card-header">
                         <span></span>
@@ -140,18 +257,28 @@
             </div>
         </section>
 
-        <!-- Sobre -->
-        <section id="sobre" class="section">
+        <!-- Sobre mim -->
+        <section
+            id="sobre"
+            class="section"
+        >
             <div class="section-heading">
-                <span class="section-number">01</span>
-                <h2>Sobre mim</h2>
+                <span class="section-number">
+                    01
+                </span>
+
+                <h2>
+                    Sobre mim
+                </h2>
             </div>
 
             <div class="about-grid">
                 <div class="about-content">
                     <p>
                         Sou estudante de
-                        <strong>Ciência da Computação na Faculdade Impacta</strong>,
+                        <strong>
+                            Ciência da Computação na Faculdade Impacta
+                        </strong>,
                         em São Paulo.
                     </p>
 
@@ -168,10 +295,18 @@
                         e evoluir por meio de experiência prática, projetos e
                         aprendizado contínuo.
                     </p>
+
+                    <p>
+                        No longo prazo, pretendo aprofundar minha formação em
+                        Engenharia de Software, Cloud, Machine Learning e
+                        Inteligência Artificial.
+                    </p>
                 </div>
 
-                <div class="about-card">
-                    <h3>Informações</h3>
+                <aside class="about-card">
+                    <h3>
+                        Informações
+                    </h3>
 
                     <ul>
                         <li>
@@ -199,20 +334,30 @@
                             Estágio e oportunidades iniciais em TI
                         </li>
                     </ul>
-                </div>
+                </aside>
             </div>
         </section>
 
         <!-- Tecnologias -->
-        <section id="tecnologias" class="section section-alt">
+        <section
+            id="tecnologias"
+            class="section section-alt"
+        >
             <div class="section-heading">
-                <span class="section-number">02</span>
-                <h2>Tecnologias e ferramentas</h2>
+                <span class="section-number">
+                    02
+                </span>
+
+                <h2>
+                    Tecnologias e ferramentas
+                </h2>
             </div>
 
             <div class="technology-grid">
                 <article class="technology-card">
-                    <h3>Back-end</h3>
+                    <h3>
+                        Back-end
+                    </h3>
 
                     <ul>
                         <li>Python</li>
@@ -223,7 +368,9 @@
                 </article>
 
                 <article class="technology-card">
-                    <h3>Banco de dados</h3>
+                    <h3>
+                        Banco de dados
+                    </h3>
 
                     <ul>
                         <li>SQL</li>
@@ -234,7 +381,9 @@
                 </article>
 
                 <article class="technology-card">
-                    <h3>Qualidade</h3>
+                    <h3>
+                        Qualidade
+                    </h3>
 
                     <ul>
                         <li>Pytest</li>
@@ -245,7 +394,9 @@
                 </article>
 
                 <article class="technology-card">
-                    <h3>Ferramentas</h3>
+                    <h3>
+                        Ferramentas
+                    </h3>
 
                     <ul>
                         <li>Git</li>
@@ -258,10 +409,18 @@
         </section>
 
         <!-- Projetos -->
-        <section id="projetos" class="section">
+        <section
+            id="projetos"
+            class="section"
+        >
             <div class="section-heading">
-                <span class="section-number">03</span>
-                <h2>Projetos</h2>
+                <span class="section-number">
+                    03
+                </span>
+
+                <h2>
+                    Projetos
+                </h2>
             </div>
 
             <div class="projects-grid">
@@ -271,7 +430,9 @@
                             Projeto principal
                         </span>
 
-                        <h3>Sistema de Chamados de TI</h3>
+                        <h3>
+                            Sistema de Chamados de TI
+                        </h3>
                     </div>
 
                     <p>
@@ -292,7 +453,9 @@
                         <span>Python</span>
                         <span>FastAPI</span>
                         <span>SQLite</span>
+                        <span>Pydantic</span>
                         <span>Pytest</span>
+                        <span>Swagger</span>
                     </div>
 
                     <a
@@ -311,7 +474,9 @@
                             Em evolução
                         </span>
 
-                        <h3>Primeiros Programas em Python</h3>
+                        <h3>
+                            Primeiros Programas em Python
+                        </h3>
                     </div>
 
                     <p>
@@ -338,11 +503,19 @@
             </div>
         </section>
 
-        <!-- Jornada -->
-        <section id="jornada" class="section section-alt">
+        <!-- Jornada técnica -->
+        <section
+            id="jornada"
+            class="section section-alt"
+        >
             <div class="section-heading">
-                <span class="section-number">04</span>
-                <h2>Jornada técnica</h2>
+                <span class="section-number">
+                    04
+                </span>
+
+                <h2>
+                    Jornada técnica
+                </h2>
             </div>
 
             <div class="timeline">
@@ -354,7 +527,9 @@
                             Etapa 01
                         </span>
 
-                        <h3>Fundamentos de programação</h3>
+                        <h3>
+                            Fundamentos de programação
+                        </h3>
 
                         <p>
                             Lógica computacional, variáveis, estruturas
@@ -371,7 +546,9 @@
                             Etapa 02
                         </span>
 
-                        <h3>Python e desenvolvimento</h3>
+                        <h3>
+                            Python e desenvolvimento
+                        </h3>
 
                         <p>
                             Criação de programas, organização de código,
@@ -388,7 +565,9 @@
                             Etapa 03
                         </span>
 
-                        <h3>Banco de dados e APIs</h3>
+                        <h3>
+                            Banco de dados e APIs
+                        </h3>
 
                         <p>
                             SQL, SQLite, modelagem relacional, FastAPI,
@@ -405,7 +584,9 @@
                             Próxima etapa
                         </span>
 
-                        <h3>Engenharia de Software e Cloud</h3>
+                        <h3>
+                            Engenharia de Software e Cloud
+                        </h3>
 
                         <p>
                             Arquitetura, aplicações escaláveis, deploy,
@@ -422,7 +603,9 @@
                             Objetivo futuro
                         </span>
 
-                        <h3>Machine Learning e Inteligência Artificial</h3>
+                        <h3>
+                            Machine Learning e Inteligência Artificial
+                        </h3>
 
                         <p>
                             Desenvolvimento de soluções inteligentes
@@ -434,10 +617,18 @@
         </section>
 
         <!-- Formação -->
-        <section id="formacao" class="section">
+        <section
+            id="formacao"
+            class="section"
+        >
             <div class="section-heading">
-                <span class="section-number">05</span>
-                <h2>Formação</h2>
+                <span class="section-number">
+                    05
+                </span>
+
+                <h2>
+                    Formação
+                </h2>
             </div>
 
             <article class="education-card">
@@ -446,9 +637,13 @@
                         2026 — Em andamento
                     </span>
 
-                    <h3>Ciência da Computação</h3>
+                    <h3>
+                        Ciência da Computação
+                    </h3>
 
-                    <p>Faculdade Impacta</p>
+                    <p>
+                        Faculdade Impacta
+                    </p>
                 </div>
 
                 <p class="education-description">
@@ -460,11 +655,18 @@
         </section>
 
         <!-- Contato -->
-        <section id="contato" class="section contact-section">
+        <section
+            id="contato"
+            class="section contact-section"
+        >
             <div class="contact-content">
-                <span class="section-number">06</span>
+                <span class="section-number">
+                    06
+                </span>
 
-                <h2>Vamos construir algo relevante?</h2>
+                <h2>
+                    Vamos construir algo relevante?
+                </h2>
 
                 <p>
                     Estou buscando minha primeira oportunidade profissional
@@ -495,6 +697,7 @@
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="footer">
         <p>
             Desenvolvido por Luis Felipe.
@@ -507,6 +710,12 @@
         <span id="current-year"></span>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <noscript>
+        <div class="noscript-message">
+            Algumas interações deste portfólio precisam do JavaScript ativado.
+        </div>
+    </noscript>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

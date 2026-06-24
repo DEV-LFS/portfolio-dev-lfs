@@ -1,3 +1,4 @@
+
 /* =========================================================
    CONFIGURAÇÕES GERAIS
 ========================================================= */
@@ -138,6 +139,47 @@ button:focus-visible {
     outline-offset: 4px;
 }
 
+.skip-link {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+
+    padding: 12px 18px;
+
+    color: #03101e;
+    background: var(--accent-secondary);
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    transform: translateY(-160%);
+    transition: transform var(--transition-fast);
+
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.noscript-message {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+
+    max-width: 380px;
+    padding: 14px 18px;
+
+    color: var(--text-primary);
+    background: #19263a;
+    border: 1px solid var(--border-highlight);
+    border-radius: 10px;
+
+    box-shadow: var(--shadow-primary);
+
+    z-index: 2000;
+}
+
 
 /* =========================================================
    CABEÇALHO E NAVEGAÇÃO
@@ -153,10 +195,20 @@ button:focus-visible {
 
     background: rgba(7, 11, 20, 0.78);
     border-bottom: 1px solid var(--border-color);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
     z-index: 1000;
+}
+
+.header.scrolled {
+    background: rgba(7, 11, 20, 0.94);
+    border-bottom-color: rgba(42, 168, 255, 0.22);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.2),
+        0 1px 0 rgba(42, 168, 255, 0.05);
 }
 
 .navbar {
@@ -171,14 +223,45 @@ button:focus-visible {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
     color: var(--text-primary);
 
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 0.08em;
+
+    transition:
+        transform var(--transition-fast),
+        opacity var(--transition-fast);
 }
 
-.logo span {
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-icon {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 0 10px rgba(42, 168, 255, 0.22)
+    );
+}
+
+.logo-name {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-name > span {
     color: var(--accent-primary);
 }
 
@@ -227,9 +310,14 @@ button:focus-visible {
     color: var(--text-primary);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.nav-links a.active {
+    color: var(--accent-secondary);
 }
 
 .menu-button {
@@ -259,6 +347,18 @@ button:focus-visible {
     transition:
         transform var(--transition-normal),
         opacity var(--transition-normal);
+}
+
+.menu-button.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -331,13 +431,17 @@ button:focus-visible {
     min-height: 100vh;
 
     margin: 0 auto;
+
     padding:
         calc(var(--header-height) + 90px)
         0
         90px;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, 0.92fr);
+
     align-items: center;
     gap: 80px;
 }
@@ -465,7 +569,10 @@ button:focus-visible {
         var(--shadow-primary),
         var(--shadow-accent);
 
-    transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
+    transform:
+        perspective(900px)
+        rotateY(-5deg)
+        rotateX(2deg);
 
     transition:
         transform var(--transition-normal),
@@ -474,7 +581,11 @@ button:focus-visible {
 
 .code-card:hover {
     border-color: var(--border-highlight);
-    transform: perspective(900px) rotateY(0deg) rotateX(0deg);
+
+    transform:
+        perspective(900px)
+        rotateY(0deg)
+        rotateX(0deg);
 }
 
 .code-card-header {
@@ -553,6 +664,7 @@ button:focus-visible {
     width: 100vw;
 
     background: rgba(13, 22, 38, 0.5);
+
     border-top: 1px solid rgba(123, 181, 255, 0.07);
     border-bottom: 1px solid rgba(123, 181, 255, 0.07);
 
@@ -614,7 +726,6 @@ button:focus-visible {
 
 .about-content p {
     color: var(--text-secondary);
-
     font-size: 1.04rem;
 }
 
@@ -634,7 +745,6 @@ button:focus-visible {
 
 .about-card h3 {
     margin-bottom: 22px;
-
     font-size: 1.15rem;
 }
 
@@ -696,7 +806,6 @@ button:focus-visible {
     margin-bottom: 22px;
 
     color: var(--accent-secondary);
-
     font-size: 1.12rem;
 }
 
@@ -870,7 +979,6 @@ button:focus-visible {
     margin-top: 28px;
 
     color: var(--accent-secondary);
-
     font-weight: 800;
 }
 
@@ -893,7 +1001,6 @@ button:focus-visible {
 
 .timeline {
     position: relative;
-
     max-width: 870px;
 }
 
@@ -915,7 +1022,6 @@ button:focus-visible {
 
 .timeline-item {
     position: relative;
-
     padding-left: 54px;
 }
 
@@ -966,13 +1072,11 @@ button:focus-visible {
 
 .timeline-content h3 {
     margin-top: 8px;
-
     font-size: 1.2rem;
 }
 
 .timeline-content p {
     margin-top: 8px;
-
     color: var(--text-secondary);
 }
 
@@ -1010,7 +1114,6 @@ button:focus-visible {
 
 .education-card h3 {
     margin-top: 8px;
-
     font-size: 1.55rem;
 }
 
@@ -1021,7 +1124,6 @@ button:focus-visible {
 
 .education-description {
     padding-left: 35px;
-
     border-left: 1px solid var(--border-color);
 }
 
@@ -1056,7 +1158,6 @@ button:focus-visible {
     margin: 24px auto 0;
 
     color: var(--text-secondary);
-
     font-size: 1.04rem;
 }
 
@@ -1113,6 +1214,21 @@ button:focus-visible {
     }
 }
 
+.reveal {
+    opacity: 0;
+
+    transform: translateY(28px);
+
+    transition:
+        opacity 650ms ease var(--reveal-delay, 0ms),
+        transform 650ms ease var(--reveal-delay, 0ms);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -1121,6 +1237,11 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }
 
@@ -1169,6 +1290,16 @@ button:focus-visible {
         width: min(calc(100% - 28px), var(--container-width));
     }
 
+    .logo {
+        gap: 8px;
+        font-size: 1.06rem;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+
     .menu-button {
         display: block;
     }
@@ -1189,6 +1320,7 @@ button:focus-visible {
 
         background: rgba(7, 11, 20, 0.98);
         border-bottom: 1px solid var(--border-color);
+
         backdrop-filter: blur(18px);
     }
 
@@ -1211,6 +1343,11 @@ button:focus-visible {
 
     .nav-links a::after {
         display: none;
+    }
+
+    .nav-links a.active {
+        color: var(--accent-secondary);
+        background: rgba(42, 168, 255, 0.06);
     }
 
     .hero,
@@ -1299,7 +1436,6 @@ button:focus-visible {
 
     .code-card pre {
         padding: 23px;
-
         font-size: 0.78rem;
     }
 
@@ -1333,85 +1469,5 @@ button:focus-visible {
 
     .contact-actions .button {
         width: 100%;
-    }
-}
-
-
-/* =========================================================
-   INTERAÇÕES CONTROLADAS PELO JAVASCRIPT
-========================================================= */
-
-.header.scrolled {
-    background: rgba(7, 11, 20, 0.94);
-
-    border-bottom-color: rgba(42, 168, 255, 0.22);
-
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.2),
-        0 1px 0 rgba(42, 168, 255, 0.05);
-}
-
-
-/* Link correspondente à seção visível */
-
-.nav-links a.active {
-    color: var(--accent-secondary);
-}
-
-.nav-links a.active::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-
-/* Animação do botão do menu */
-
-.menu-button.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.menu-button.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-button.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-
-/* Entrada progressiva das seções */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(28px);
-
-    transition:
-        opacity 650ms ease var(--reveal-delay, 0ms),
-        transform 650ms ease var(--reveal-delay, 0ms);
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Mantém elementos visíveis sem JavaScript ou com animações reduzidas */
-
-@media (prefers-reduced-motion: reduce) {
-    .reveal {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-
-/* Ajustes do menu ativo em telas pequenas */
-
-@media (max-width: 780px) {
-    .nav-links a.active {
-        color: var(--accent-secondary);
-        background: rgba(42, 168, 255, 0.06);
     }
 }
