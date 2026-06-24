@@ -1335,3 +1335,83 @@ button:focus-visible {
         width: 100%;
     }
 }
+
+
+/* =========================================================
+   INTERAÇÕES CONTROLADAS PELO JAVASCRIPT
+========================================================= */
+
+.header.scrolled {
+    background: rgba(7, 11, 20, 0.94);
+
+    border-bottom-color: rgba(42, 168, 255, 0.22);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.2),
+        0 1px 0 rgba(42, 168, 255, 0.05);
+}
+
+
+/* Link correspondente à seção visível */
+
+.nav-links a.active {
+    color: var(--accent-secondary);
+}
+
+.nav-links a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* Animação do botão do menu */
+
+.menu-button.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Entrada progressiva das seções */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(28px);
+
+    transition:
+        opacity 650ms ease var(--reveal-delay, 0ms),
+        transform 650ms ease var(--reveal-delay, 0ms);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Mantém elementos visíveis sem JavaScript ou com animações reduzidas */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Ajustes do menu ativo em telas pequenas */
+
+@media (max-width: 780px) {
+    .nav-links a.active {
+        color: var(--accent-secondary);
+        background: rgba(42, 168, 255, 0.06);
+    }
+}
