@@ -1,83 +1,119 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+```
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <meta
-        name="description"
-        content="Portfólio profissional de Luis Felipe, estudante de Ciência da Computação com foco em desenvolvimento back-end, Python, APIs REST e Engenharia de Software."
-    >
+<meta
+    name="description"
+    content="Portfólio profissional de Luis Felipe, estudante de Ciência da Computação com foco em desenvolvimento back-end, Python, APIs REST e Engenharia de Software."
+>
 
-    <meta
-        name="keywords"
-        content="Luis Felipe, Ciência da Computação, Python, FastAPI, SQL, Backend, API REST, Engenharia de Software"
-    >
+<meta
+    name="keywords"
+    content="Luis Felipe, Ciência da Computação, Python, FastAPI, SQL, back-end, API REST, Engenharia de Software, portfólio"
+>
 
-    <meta
-        name="author"
-        content="Luis Felipe"
-    >
+<meta
+    name="author"
+    content="Luis Felipe"
+>
 
-    <meta
-        name="theme-color"
-        content="#070b14"
-    >
+<meta
+    name="robots"
+    content="index, follow"
+>
 
-    <!-- Open Graph -->
-    <meta
-        property="og:type"
-        content="website"
-    >
+<meta
+    name="theme-color"
+    content="#070b14"
+>
 
-    <meta
-        property="og:title"
-        content="Luis Felipe | Back-end e Engenharia de Software"
-    >
+<!-- URL oficial do portfólio -->
+<link
+    rel="canonical"
+    href="https://portfolio-dev-lfs.vercel.app/"
+>
 
-    <meta
-        property="og:description"
-        content="Projetos, trajetória técnica e conhecimentos em Python, FastAPI, SQL e desenvolvimento back-end."
-    >
+<!-- Open Graph -->
+<meta
+    property="og:type"
+    content="website"
+>
 
-    <!-- Twitter / X -->
-    <meta
-        name="twitter:card"
-        content="summary"
-    >
+<meta
+    property="og:url"
+    content="https://portfolio-dev-lfs.vercel.app/"
+>
 
-    <meta
-        name="twitter:title"
-        content="Luis Felipe | Portfólio profissional"
-    >
+<meta
+    property="og:site_name"
+    content="Portfólio de Luis Felipe"
+>
 
-    <meta
-        name="twitter:description"
-        content="Estudante de Ciência da Computação com foco em back-end e Engenharia de Software."
-    >
+<meta
+    property="og:locale"
+    content="pt_BR"
+>
 
-    <title>Luis Felipe | Back-end e Engenharia de Software</title>
+<meta
+    property="og:title"
+    content="Luis Felipe | Back-end e Engenharia de Software"
+>
 
-    <!-- Ícone da aba do navegador -->
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        sizes="any"
-        href="./assets/images/favicon.svg?v=4"
-    >
+<meta
+    property="og:description"
+    content="Conheça meus projetos, trajetória técnica e conhecimentos em Python, FastAPI, SQL, APIs REST e Engenharia de Software."
+>
 
-    <link
-        rel="stylesheet"
-        href="./assets/css/style.css"
-    >
+<!--
+    A propriedade og:image será adicionada futuramente
+    com uma imagem PNG de 1200 x 630 pixels.
+-->
+
+<!-- Twitter / X -->
+<meta
+    name="twitter:card"
+    content="summary"
+>
+
+<meta
+    name="twitter:title"
+    content="Luis Felipe | Portfólio profissional"
+>
+
+<meta
+    name="twitter:description"
+    content="Estudante de Ciência da Computação com foco em desenvolvimento back-end e Engenharia de Software."
+>
+
+<title>Luis Felipe | Back-end e Engenharia de Software</title>
+
+<!-- Favicon da aba do navegador -->
+<link
+    rel="icon"
+    type="image/svg+xml"
+    sizes="any"
+    href="./assets/images/favicon.svg?v=5"
+>
+
+<!-- Folha de estilos -->
+<link
+    rel="stylesheet"
+    href="./assets/css/style.css"
+>
+```
+
 </head>
 
 <body>
-    <!-- Link para acessibilidade -->
+    <!-- Link de acessibilidade -->
     <a
         href="#conteudo-principal"
         class="skip-link"
@@ -85,637 +121,644 @@
         Ir para o conteúdo principal
     </a>
 
-    <!-- Cabeçalho -->
-    <header class="header">
-        <nav
-            class="navbar"
-            aria-label="Navegação principal"
+```
+<!-- Cabeçalho -->
+<header class="header">
+    <nav
+        class="navbar"
+        aria-label="Navegação principal"
+    >
+        <a
+            href="#inicio"
+            class="logo"
+            aria-label="Ir para o início do portfólio"
         >
-            <a
-                href="#inicio"
-                class="logo"
-                aria-label="Ir para o início"
-            >
-                <img
-                    src="./assets/images/favicon.svg?v=4"
-                    alt=""
-                    class="logo-icon"
-                    width="40"
-                    height="40"
-                    aria-hidden="true"
-                >
-
-                <span class="logo-name">
-                    DEV<span>-LFS</span>
-                </span>
-            </a>
-
-            <button
-                class="menu-button"
-                id="menu-button"
-                type="button"
-                aria-label="Abrir menu de navegação"
-                aria-expanded="false"
-                aria-controls="nav-links"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul
-                class="nav-links"
-                id="nav-links"
-            >
-                <li>
-                    <a href="#inicio">
-                        Início
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#sobre">
-                        Sobre
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#tecnologias">
-                        Tecnologias
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#projetos">
-                        Projetos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#jornada">
-                        Jornada
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#formacao">
-                        Formação
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contato">
-                        Contato
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Conteúdo principal -->
-    <main id="conteudo-principal">
-        <!-- Apresentação -->
-        <section
-            id="inicio"
-            class="hero"
-        >
-            <div class="hero-content">
-                <p class="hero-tag">
-                    Olá, meu nome é
-                </p>
-
-                <h1>
-                    Luis Felipe
-                </h1>
-
-                <h2>
-                    Estudante de Ciência da Computação
-
-                    <span>
-                        e desenvolvedor back-end em formação.
-                    </span>
-                </h2>
-
-                <p class="hero-description">
-                    Transformo aprendizado técnico em projetos funcionais,
-                    documentados e testados, com foco em Python, APIs REST,
-                    banco de dados e Engenharia de Software.
-                </p>
-
-                <div class="hero-actions">
-                    <a
-                        href="#projetos"
-                        class="button button-primary"
-                    >
-                        Ver projetos
-                    </a>
-
-                    <a
-                        href="https://github.com/DEV-LFS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button button-secondary"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/luis-felipe-sebastiao/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button button-secondary"
-                    >
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-
-            <div
-                class="hero-visual"
+            <img
+                src="./assets/images/favicon.svg?v=5"
+                alt=""
+                class="logo-icon"
+                width="40"
+                height="40"
                 aria-hidden="true"
             >
-                <div class="code-card">
-                    <div class="code-card-header">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
 
-                    <pre><code>class Desenvolvedor:
-    def __init__(self):
-        self.nome = "Luis Felipe"
-        self.foco = [
-            "Python",
-            "Backend",
-            "APIs REST",
-            "SQL"
-        ]
+            <span class="logo-name">
+                DEV<span>-LFS</span>
+            </span>
+        </a>
 
-    def evoluir(self):
-        return "Construindo projetos reais"</code></pre>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre mim -->
-        <section
-            id="sobre"
-            class="section"
+        <button
+            class="menu-button"
+            id="menu-button"
+            type="button"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="nav-links"
         >
-            <div class="section-heading">
-                <span class="section-number">
-                    01
-                </span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-                <h2>
-                    Sobre mim
-                </h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-content">
-                    <p>
-                        Sou estudante de
-                        <strong>
-                            Ciência da Computação na Faculdade Impacta
-                        </strong>,
-                        em São Paulo.
-                    </p>
-
-                    <p>
-                        Minha trajetória está sendo construída com foco em
-                        desenvolvimento back-end, banco de dados, APIs REST,
-                        testes automatizados e fundamentos de Engenharia de
-                        Software.
-                    </p>
-
-                    <p>
-                        Meu objetivo atual é conquistar minha primeira
-                        oportunidade profissional em Tecnologia da Informação
-                        e evoluir por meio de experiência prática, projetos e
-                        aprendizado contínuo.
-                    </p>
-
-                    <p>
-                        No longo prazo, pretendo aprofundar minha formação em
-                        Engenharia de Software, Cloud, Machine Learning e
-                        Inteligência Artificial.
-                    </p>
-                </div>
-
-                <aside class="about-card">
-                    <h3>
-                        Informações
-                    </h3>
-
-                    <ul>
-                        <li>
-                            <strong>Formação:</strong>
-                            Ciência da Computação
-                        </li>
-
-                        <li>
-                            <strong>Instituição:</strong>
-                            Faculdade Impacta
-                        </li>
-
-                        <li>
-                            <strong>Localização:</strong>
-                            São Paulo, Brasil
-                        </li>
-
-                        <li>
-                            <strong>Foco:</strong>
-                            Back-end e Engenharia de Software
-                        </li>
-
-                        <li>
-                            <strong>Disponibilidade:</strong>
-                            Estágio e oportunidades iniciais em TI
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-        </section>
-
-        <!-- Tecnologias -->
-        <section
-            id="tecnologias"
-            class="section section-alt"
+        <ul
+            class="nav-links"
+            id="nav-links"
         >
-            <div class="section-heading">
-                <span class="section-number">
-                    02
-                </span>
+            <li>
+                <a href="#inicio">
+                    Início
+                </a>
+            </li>
 
-                <h2>
-                    Tecnologias e ferramentas
-                </h2>
-            </div>
+            <li>
+                <a href="#sobre">
+                    Sobre
+                </a>
+            </li>
 
-            <div class="technology-grid">
-                <article class="technology-card">
-                    <h3>
-                        Back-end
-                    </h3>
+            <li>
+                <a href="#tecnologias">
+                    Tecnologias
+                </a>
+            </li>
 
-                    <ul>
-                        <li>Python</li>
-                        <li>FastAPI</li>
-                        <li>Pydantic</li>
-                        <li>APIs REST</li>
-                    </ul>
-                </article>
-
-                <article class="technology-card">
-                    <h3>
-                        Banco de dados
-                    </h3>
-
-                    <ul>
-                        <li>SQL</li>
-                        <li>SQLite</li>
-                        <li>Modelagem relacional</li>
-                        <li>Persistência de dados</li>
-                    </ul>
-                </article>
-
-                <article class="technology-card">
-                    <h3>
-                        Qualidade
-                    </h3>
-
-                    <ul>
-                        <li>Pytest</li>
-                        <li>Testes automatizados</li>
-                        <li>Swagger</li>
-                        <li>OpenAPI</li>
-                    </ul>
-                </article>
-
-                <article class="technology-card">
-                    <h3>
-                        Ferramentas
-                    </h3>
-
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Visual Studio Code</li>
-                        <li>PowerShell</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <!-- Projetos -->
-        <section
-            id="projetos"
-            class="section"
-        >
-            <div class="section-heading">
-                <span class="section-number">
-                    03
-                </span>
-
-                <h2>
+            <li>
+                <a href="#projetos">
                     Projetos
-                </h2>
-            </div>
+                </a>
+            </li>
 
-            <div class="projects-grid">
-                <article class="project-card project-featured">
-                    <div class="project-header">
-                        <span class="project-status">
-                            Projeto principal
-                        </span>
+            <li>
+                <a href="#jornada">
+                    Jornada
+                </a>
+            </li>
 
-                        <h3>
-                            Sistema de Chamados de TI
-                        </h3>
-                    </div>
-
-                    <p>
-                        API REST para gerenciamento de chamados técnicos,
-                        construída com Python, FastAPI e SQLite.
-                    </p>
-
-                    <ul class="project-features">
-                        <li>CRUD completo</li>
-                        <li>Persistência em SQLite</li>
-                        <li>Validação com Pydantic</li>
-                        <li>Documentação Swagger</li>
-                        <li>Tratamento de erros HTTP</li>
-                        <li>Testes automatizados com Pytest</li>
-                    </ul>
-
-                    <div class="project-technologies">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>SQLite</span>
-                        <span>Pydantic</span>
-                        <span>Pytest</span>
-                        <span>Swagger</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/DEV-LFS/sistema-chamados-ti"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        Ver código no GitHub
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <span class="project-status">
-                            Em evolução
-                        </span>
-
-                        <h3>
-                            Primeiros Programas em Python
-                        </h3>
-                    </div>
-
-                    <p>
-                        Repositório dedicado aos exercícios, algoritmos e
-                        pequenos sistemas desenvolvidos durante meus estudos
-                        de programação.
-                    </p>
-
-                    <div class="project-technologies">
-                        <span>Python</span>
-                        <span>Algoritmos</span>
-                        <span>Lógica</span>
-                    </div>
-
-                    <a
-                        href="https://github.com/DEV-LFS/primeiro-programa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        Ver repositório
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Jornada técnica -->
-        <section
-            id="jornada"
-            class="section section-alt"
-        >
-            <div class="section-heading">
-                <span class="section-number">
-                    04
-                </span>
-
-                <h2>
-                    Jornada técnica
-                </h2>
-            </div>
-
-            <div class="timeline">
-                <article class="timeline-item">
-                    <span class="timeline-marker"></span>
-
-                    <div class="timeline-content">
-                        <span class="timeline-stage">
-                            Etapa 01
-                        </span>
-
-                        <h3>
-                            Fundamentos de programação
-                        </h3>
-
-                        <p>
-                            Lógica computacional, variáveis, estruturas
-                            condicionais, repetições e funções.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-marker"></span>
-
-                    <div class="timeline-content">
-                        <span class="timeline-stage">
-                            Etapa 02
-                        </span>
-
-                        <h3>
-                            Python e desenvolvimento
-                        </h3>
-
-                        <p>
-                            Criação de programas, organização de código,
-                            manipulação de dados e boas práticas.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-marker"></span>
-
-                    <div class="timeline-content">
-                        <span class="timeline-stage">
-                            Etapa 03
-                        </span>
-
-                        <h3>
-                            Banco de dados e APIs
-                        </h3>
-
-                        <p>
-                            SQL, SQLite, modelagem relacional, FastAPI,
-                            Swagger e operações CRUD.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-marker"></span>
-
-                    <div class="timeline-content">
-                        <span class="timeline-stage">
-                            Próxima etapa
-                        </span>
-
-                        <h3>
-                            Engenharia de Software e Cloud
-                        </h3>
-
-                        <p>
-                            Arquitetura, aplicações escaláveis, deploy,
-                            infraestrutura e serviços em nuvem.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="timeline-item">
-                    <span class="timeline-marker"></span>
-
-                    <div class="timeline-content">
-                        <span class="timeline-stage">
-                            Objetivo futuro
-                        </span>
-
-                        <h3>
-                            Machine Learning e Inteligência Artificial
-                        </h3>
-
-                        <p>
-                            Desenvolvimento de soluções inteligentes
-                            integradas a sistemas reais.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Formação -->
-        <section
-            id="formacao"
-            class="section"
-        >
-            <div class="section-heading">
-                <span class="section-number">
-                    05
-                </span>
-
-                <h2>
+            <li>
+                <a href="#formacao">
                     Formação
-                </h2>
+                </a>
+            </li>
+
+            <li>
+                <a href="#contato">
+                    Contato
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Conteúdo principal -->
+<main id="conteudo-principal">
+    <!-- Apresentação -->
+    <section
+        id="inicio"
+        class="hero"
+    >
+        <div class="hero-content">
+            <p class="hero-tag">
+                Olá, meu nome é
+            </p>
+
+            <h1>
+                Luis Felipe
+            </h1>
+
+            <h2>
+                Estudante de Ciência da Computação
+
+                <span>
+                    e desenvolvedor back-end em formação.
+                </span>
+            </h2>
+
+            <p class="hero-description">
+                Transformo aprendizado técnico em projetos funcionais,
+                documentados e testados, com foco em Python, APIs REST,
+                banco de dados e Engenharia de Software.
+            </p>
+
+            <div class="hero-actions">
+                <a
+                    href="#projetos"
+                    class="button button-primary"
+                >
+                    Ver projetos
+                </a>
+
+                <a
+                    href="https://github.com/DEV-LFS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/luis-felipe-sebastiao/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary"
+                >
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="hero-visual"
+            aria-hidden="true"
+        >
+            <div class="code-card">
+                <div class="code-card-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <pre><code>class Desenvolvedor:
+def __init__(self):
+    self.nome = "Luis Felipe"
+    self.foco = [
+        "Python",
+        "Backend",
+        "APIs REST",
+        "SQL"
+    ]
+
+def evoluir(self):
+    return "Construindo projetos reais"</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mim -->
+    <section
+        id="sobre"
+        class="section"
+    >
+        <div class="section-heading">
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                Sobre mim
+            </h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-content">
+                <p>
+                    Sou estudante de
+                    <strong>
+                        Ciência da Computação na Faculdade Impacta
+                    </strong>,
+                    em São Paulo.
+                </p>
+
+                <p>
+                    Minha trajetória está sendo construída com foco em
+                    desenvolvimento back-end, banco de dados, APIs REST,
+                    testes automatizados e fundamentos de Engenharia de
+                    Software.
+                </p>
+
+                <p>
+                    Meu objetivo atual é conquistar minha primeira
+                    oportunidade profissional em Tecnologia da Informação
+                    e evoluir por meio de experiência prática, projetos e
+                    aprendizado contínuo.
+                </p>
+
+                <p>
+                    No longo prazo, pretendo aprofundar minha formação em
+                    Engenharia de Software, computação em nuvem, Machine
+                    Learning e Inteligência Artificial.
+                </p>
             </div>
 
-            <article class="education-card">
-                <div>
-                    <span class="education-period">
-                        2026 — Em andamento
+            <aside class="about-card">
+                <h3>
+                    Informações
+                </h3>
+
+                <ul>
+                    <li>
+                        <strong>Formação:</strong>
+                        Ciência da Computação
+                    </li>
+
+                    <li>
+                        <strong>Instituição:</strong>
+                        Faculdade Impacta
+                    </li>
+
+                    <li>
+                        <strong>Localização:</strong>
+                        São Paulo, Brasil
+                    </li>
+
+                    <li>
+                        <strong>Foco:</strong>
+                        Back-end e Engenharia de Software
+                    </li>
+
+                    <li>
+                        <strong>Disponibilidade:</strong>
+                        Estágio e oportunidades iniciais em TI
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section
+        id="tecnologias"
+        class="section section-alt"
+    >
+        <div class="section-heading">
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                Tecnologias e ferramentas
+            </h2>
+        </div>
+
+        <div class="technology-grid">
+            <article class="technology-card">
+                <h3>
+                    Back-end
+                </h3>
+
+                <ul>
+                    <li>Python</li>
+                    <li>FastAPI</li>
+                    <li>Pydantic</li>
+                    <li>APIs REST</li>
+                </ul>
+            </article>
+
+            <article class="technology-card">
+                <h3>
+                    Banco de dados
+                </h3>
+
+                <ul>
+                    <li>SQL</li>
+                    <li>SQLite</li>
+                    <li>Modelagem relacional</li>
+                    <li>Persistência de dados</li>
+                </ul>
+            </article>
+
+            <article class="technology-card">
+                <h3>
+                    Qualidade
+                </h3>
+
+                <ul>
+                    <li>Pytest</li>
+                    <li>Testes automatizados</li>
+                    <li>Swagger</li>
+                    <li>OpenAPI</li>
+                </ul>
+            </article>
+
+            <article class="technology-card">
+                <h3>
+                    Ferramentas
+                </h3>
+
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Visual Studio Code</li>
+                    <li>PowerShell</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section
+        id="projetos"
+        class="section"
+    >
+        <div class="section-heading">
+            <span class="section-number">
+                03
+            </span>
+
+            <h2>
+                Projetos
+            </h2>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card project-featured">
+                <div class="project-header">
+                    <span class="project-status">
+                        Projeto principal
                     </span>
 
                     <h3>
-                        Ciência da Computação
+                        Sistema de Chamados de TI
+                    </h3>
+                </div>
+
+                <p>
+                    API REST para gerenciamento de chamados técnicos,
+                    construída com Python, FastAPI e SQLite.
+                </p>
+
+                <ul class="project-features">
+                    <li>CRUD completo</li>
+                    <li>Persistência em SQLite</li>
+                    <li>Validação com Pydantic</li>
+                    <li>Documentação Swagger</li>
+                    <li>Tratamento de erros HTTP</li>
+                    <li>Testes automatizados com Pytest</li>
+                </ul>
+
+                <div class="project-technologies">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQLite</span>
+                    <span>Pydantic</span>
+                    <span>Pytest</span>
+                    <span>Swagger</span>
+                </div>
+
+                <a
+                    href="https://github.com/DEV-LFS/sistema-chamados-ti"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    Ver código no GitHub
+                </a>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-status">
+                        Em evolução
+                    </span>
+
+                    <h3>
+                        Primeiros Programas em Python
+                    </h3>
+                </div>
+
+                <p>
+                    Repositório dedicado aos exercícios, algoritmos e
+                    pequenos sistemas desenvolvidos durante meus estudos
+                    de programação.
+                </p>
+
+                <div class="project-technologies">
+                    <span>Python</span>
+                    <span>Algoritmos</span>
+                    <span>Lógica</span>
+                </div>
+
+                <a
+                    href="https://github.com/DEV-LFS/primeiro-programa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    Ver repositório
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Jornada técnica -->
+    <section
+        id="jornada"
+        class="section section-alt"
+    >
+        <div class="section-heading">
+            <span class="section-number">
+                04
+            </span>
+
+            <h2>
+                Jornada técnica
+            </h2>
+        </div>
+
+        <div class="timeline">
+            <article class="timeline-item">
+                <span class="timeline-marker"></span>
+
+                <div class="timeline-content">
+                    <span class="timeline-stage">
+                        Etapa 01
+                    </span>
+
+                    <h3>
+                        Fundamentos de programação
                     </h3>
 
                     <p>
-                        Faculdade Impacta
+                        Lógica computacional, variáveis, estruturas
+                        condicionais, repetições e funções.
                     </p>
                 </div>
-
-                <p class="education-description">
-                    Formação voltada para programação, banco de dados,
-                    desenvolvimento de software, APIs, automação,
-                    inteligência artificial e Engenharia de Software.
-                </p>
             </article>
-        </section>
 
-        <!-- Contato -->
-        <section
-            id="contato"
-            class="section contact-section"
-        >
-            <div class="contact-content">
-                <span class="section-number">
-                    06
+            <article class="timeline-item">
+                <span class="timeline-marker"></span>
+
+                <div class="timeline-content">
+                    <span class="timeline-stage">
+                        Etapa 02
+                    </span>
+
+                    <h3>
+                        Python e desenvolvimento
+                    </h3>
+
+                    <p>
+                        Criação de programas, organização de código,
+                        manipulação de dados e boas práticas.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-marker"></span>
+
+                <div class="timeline-content">
+                    <span class="timeline-stage">
+                        Etapa 03
+                    </span>
+
+                    <h3>
+                        Banco de dados e APIs
+                    </h3>
+
+                    <p>
+                        SQL, SQLite, modelagem relacional, FastAPI,
+                        Swagger e operações CRUD.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-marker"></span>
+
+                <div class="timeline-content">
+                    <span class="timeline-stage">
+                        Próxima etapa
+                    </span>
+
+                    <h3>
+                        Engenharia de Software e Cloud
+                    </h3>
+
+                    <p>
+                        Arquitetura, aplicações escaláveis, deploy,
+                        infraestrutura e serviços em nuvem.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <span class="timeline-marker"></span>
+
+                <div class="timeline-content">
+                    <span class="timeline-stage">
+                        Objetivo futuro
+                    </span>
+
+                    <h3>
+                        Machine Learning e Inteligência Artificial
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de soluções inteligentes
+                        integradas a sistemas reais.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Formação -->
+    <section
+        id="formacao"
+        class="section"
+    >
+        <div class="section-heading">
+            <span class="section-number">
+                05
+            </span>
+
+            <h2>
+                Formação
+            </h2>
+        </div>
+
+        <article class="education-card">
+            <div>
+                <span class="education-period">
+                    2026 — Em andamento
                 </span>
 
-                <h2>
-                    Vamos construir algo relevante?
-                </h2>
+                <h3>
+                    Ciência da Computação
+                </h3>
 
                 <p>
-                    Estou buscando minha primeira oportunidade profissional
-                    em TI e aberto a conexões, projetos e aprendizado
-                    colaborativo.
+                    Faculdade Impacta
                 </p>
-
-                <div class="contact-actions">
-                    <a
-                        href="https://www.linkedin.com/in/luis-felipe-sebastiao/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button button-primary"
-                    >
-                        Falar pelo LinkedIn
-                    </a>
-
-                    <a
-                        href="https://github.com/DEV-LFS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button button-secondary"
-                    >
-                        Ver GitHub
-                    </a>
-                </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>
-            Desenvolvido por Luis Felipe.
-        </p>
+            <p class="education-description">
+                Formação voltada para programação, banco de dados,
+                desenvolvimento de software, APIs, automação,
+                inteligência artificial e Engenharia de Software.
+            </p>
+        </article>
+    </section>
 
-        <p>
-            Construindo competência técnica, um projeto por vez.
-        </p>
+    <!-- Contato -->
+    <section
+        id="contato"
+        class="section contact-section"
+    >
+        <div class="contact-content">
+            <span class="section-number">
+                06
+            </span>
 
-        <span id="current-year"></span>
-    </footer>
+            <h2>
+                Vamos construir algo relevante?
+            </h2>
 
-    <noscript>
-        <div class="noscript-message">
-            Algumas interações deste portfólio precisam do JavaScript ativado.
+            <p>
+                Estou buscando minha primeira oportunidade profissional
+                em TI e aberto a conexões, projetos e aprendizado
+                colaborativo.
+            </p>
+
+            <div class="contact-actions">
+                <a
+                    href="https://www.linkedin.com/in/luis-felipe-sebastiao/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-primary"
+                >
+                    Falar pelo LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/DEV-LFS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary"
+                >
+                    Ver GitHub
+                </a>
+            </div>
         </div>
-    </noscript>
+    </section>
+</main>
 
-    <script src="./assets/js/script.js"></script>
+<!-- Rodapé -->
+<footer class="footer">
+    <p>
+        Desenvolvido por Luis Felipe.
+    </p>
+
+    <p>
+        Construindo competência técnica, um projeto por vez.
+    </p>
+
+    <p>
+        © <span id="current-year"></span>
+    </p>
+</footer>
+
+<!-- Mensagem para navegadores sem JavaScript -->
+<noscript>
+    <div class="noscript-message">
+        Algumas interações deste portfólio precisam do JavaScript ativado.
+    </div>
+</noscript>
+
+<!-- JavaScript -->
+<script src="./assets/js/script.js"></script>
+```
+
 </body>
 </html>
