@@ -88,15 +88,16 @@ Os certificados podem ser filtrados pelas seguintes categorias:
 * Cursos
 * Faculdade
 
-### Certificado publicado
+### Certificados publicados
 
-**Projeto Integrador No Code/Low Code — SLFood**
+#### Projeto Integrador No Code/Low Code — SLFood
 
 * Instituição: Faculdade Impacta
 * Curso: Ciência da Computação
 * Tipo: Certificado de participação
 * Período: fevereiro a junho de 2026
 * Emissão: 14 de junho de 2026
+* Categoria no portfólio: Faculdade
 
 O projeto envolveu o desenvolvimento do **SLFood — Sistema de Delivery para o Restaurante Sabor Local**.
 
@@ -108,12 +109,37 @@ Tecnologias e competências relacionadas:
 * n8n
 * Trello
 * UX/UI
-* back-end
-* banco de dados
-* automação
-* gestão ágil
+* Backend
+* Banco de dados
+* Automação
+* Gestão ágil
 
 A versão pública do certificado possui dados acadêmicos sensíveis ocultados.
+
+#### Curso de Informática — Inforwork
+
+* Instituição: Instituto iNext / YouLike Treinamento e Desenvolvimento
+* Tipo: Certificado de conclusão
+* Curso: Inforwork
+* Carga horária: 86 horas
+* Média final: 9,4
+* Período: 09 de agosto de 2022 a 13 de junho de 2023
+* Emissão: 15 de agosto de 2023
+* Categoria no portfólio: Cursos
+
+Certificado de conclusão de curso voltado para fundamentos de informática, uso do computador, internet, pacote Office e ferramentas de produtividade.
+
+Módulos e competências relacionadas:
+
+* Windows
+* Internet
+* Word
+* PowerPoint
+* Excel
+* Pacote Office
+* Produtividade digital
+
+A imagem pública do certificado foi tratada para melhor apresentação visual no portfólio.
 
 ## ✨ Funcionalidades do portfólio
 
@@ -142,6 +168,7 @@ portfolio-dev-lfs/
 │   │   ├── college/
 │   │   │   └── certificado-projeto-integrador-slfood-impacta-2026-publico.png
 │   │   └── courses/
+│   │       └── certificado-informatica-inext-2023-publico.png
 │   ├── css/
 │   │   └── style.css
 │   ├── images/
