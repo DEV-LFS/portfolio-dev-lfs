@@ -1,6 +1,6 @@
 # Portfólio Profissional — Luis Felipe
 
-Portfólio profissional desenvolvido para apresentar minha trajetória acadêmica, conhecimentos técnicos, projetos e certificações na área de Tecnologia da Informação.
+Portfólio profissional desenvolvido para apresentar minha trajetória acadêmica, conhecimentos técnicos, projetos, certificações e evolução na área de Tecnologia da Informação.
 
 ## 🌐 Portfólio publicado
 
@@ -15,6 +15,8 @@ Sou estudante de **Ciência da Computação na Faculdade Impacta**, com foco em 
 Minha trajetória está sendo construída por meio de estudos, projetos práticos, documentação técnica, banco de dados, APIs REST e testes automatizados.
 
 Meu objetivo atual é conquistar minha primeira oportunidade profissional em Tecnologia da Informação e continuar evoluindo como desenvolvedor.
+
+No longo prazo, pretendo aprofundar minha formação em Engenharia de Software, computação em nuvem, Machine Learning e Inteligência Artificial.
 
 ## 🛠️ Tecnologias e ferramentas
 
@@ -76,14 +78,6 @@ Principais funcionalidades:
 
 https://github.com/DEV-LFS/sistema-chamados-ti
 
-### Primeiros Programas em Python
-
-Repositório dedicado aos exercícios, algoritmos e pequenos sistemas desenvolvidos durante meus estudos de programação.
-
-**Repositório:**
-
-https://github.com/DEV-LFS/primeiro-programa
-
 ## 🎓 Certificações
 
 O portfólio possui uma seção própria para certificados acadêmicos, cursos externos, capacitações e atividades complementares.
@@ -128,7 +122,8 @@ A versão pública do certificado possui dados acadêmicos sensíveis ocultados.
 * menu mobile;
 * animações de entrada;
 * destaque automático da seção ativa;
-* integração com GitHub e LinkedIn;
+* integração com GitHub, LinkedIn, Instagram e e-mail;
+* botão de e-mail com assunto e mensagem pré-preenchidos;
 * apresentação de projetos;
 * seção de formação acadêmica;
 * seção de certificações;
@@ -185,8 +180,10 @@ Antes da publicação, certificados e comprovantes são revisados para evitar a 
 
 ## 📌 Evoluções futuras
 
-* novos projetos;
 * novos certificados;
+* projetos desenvolvidos a partir dos cursos da DIO;
+* repositórios específicos para cada curso/projeto da DIO;
+* atualização contínua do portfólio conforme novos estudos forem concluídos;
 * experiências profissionais;
 * versão em inglês;
 * demonstrações públicas dos projetos;
@@ -200,4 +197,6 @@ Antes da publicação, certificados e comprovantes são revisados para evitar a 
 
 * GitHub: https://github.com/DEV-LFS
 * LinkedIn: https://www.linkedin.com/in/luis-felipe-sebastiao/
+* Instagram profissional: https://www.instagram.com/lf.devweb/
+* E-mail profissional: [luisfelipesebastiao161@gmail.com](mailto:luisfelipesebastiao161@gmail.com?subject=Contato%20para%20projetos%20ou%20colabora%C3%A7%C3%B5es&body=Ol%C3%A1%2C%20tudo%20bem%3F%0A%0AGostaria%20de%20entrar%20em%20contato%20com%20voc%C3%AA%20para%20discutir%20poss%C3%ADveis%20projetos%20ou%20colabora%C3%A7%C3%B5es.)
 * Portfólio: https://portfolio-dev-lfs.vercel.app/
